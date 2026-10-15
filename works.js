@@ -4,7 +4,7 @@ var fallbackWorks = [
     {
         title: "Travel",
         description: "街中の写真",
-        image: "./media/A9B8D6ED-F4EF-4DC8-96EC-4571CC794BEE.JPG",
+        image: "./A9B8D6ED-F4EF-4DC8-96EC-4571CC794BEE.JPG",
         link: "travel.html",
         category: "Travel",
         year: ""
@@ -12,7 +12,7 @@ var fallbackWorks = [
     {
         title: "Music",
         description: "ライブ中の写真",
-        image: "./media/EFCD936C-0914-4EEE-ACCA-CD9B330C1D82.JPG",
+        image: "./EFCD936C-0914-4EEE-ACCA-CD9B330C1D82.JPG",
         link: "music.html",
         category: "Music",
         year: ""
@@ -20,7 +20,7 @@ var fallbackWorks = [
     {
         title: "Photography",
         description: "サンタモニカの写真",
-        image: "./media/DSCN6131.JPG",
+        image: "./DSCN6131.JPG",
         link: "photography.html",
         category: "Photography",
         year: ""
@@ -61,7 +61,15 @@ function setupWorks(works) {
 
         var sortType = sortSelect.value;
 
-        var filteredWorks = works.slice();
+        
+    
+    var filteredWorks = works.filter(function(work) {
+        return !work.section ||
+                work.section.trim() === "" ||
+                work.section.trim() === "home";
+    });
+
+
 
         if (selectedCategory !== "all") {
             filteredWorks = filteredWorks.filter(function(work) {
@@ -171,3 +179,7 @@ fetch("works.csv")
     .catch(function() {
         setupWorks(fallbackWorks);
     });
+    /*
+    works = works.filter(function(work) {
+    return work.section !== "gallery";
+    */
