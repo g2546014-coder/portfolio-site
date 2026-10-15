@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Photography | Lint Oura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">Lint Oura</a>
+
+        <nav>
+            <a href="travel.html">Travel</a>
+            <a href="music.html">Music</a>
+            <a href="photography.html">Photography</a>
+        </nav>
+    </header>
+
+    <main class="photo-page">
+
+        <div class="photo-heading">
+            <p>MY PHOTO COLLECTION</p>
+            <h1>Photography.</h1>
+        </div>
+
+        <!-- 写真の表示場所 -->
+        <div class="photo-gallery-grid"
+             id="photo-gallery"></div>
+
+        <a href="index.html" class="photo-back">
+            ← BACK
+        </a>
+    </main>
+
+    <footer>©2026 Lint Oura</footer>
+
+    <script>
+        const gallery =
+            document.getElementById("photo-gallery");
+
+        // works.csvから写真を取得
+        fetch("works.csv")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("CSV読み込みエラー");
+                }
+                return response.text();
+            })
+            .then(text => {
+
+                const lines = text
+                    .replace(/^\uFEFF/, "")
+                    .trim()
+                    .split(/\r?\n/);
+
+                const headers = lines.shift()
+                    .split(",")
+                    .map(h => h.trim());
+
+                const works = lines.map(line => {
+                    const values = line.split(",");
+                    const work = {};
+
+                    headers.forEach((header, i) => {
+                        work[header] =
+                            (values[i] || "").trim();
+                    });
+
+                    return work;
+                });
+
+                // 写真ページ用のデータだけ選択
+                const photos = works.filter(work =>
+                    work.section === "gallery"
+                );
+
+                photos.forEach((photo, index) => {
+
+                    const card =
+                        document.createElement("figure");
+                    card.className = "photo-card";
+
+                    card.style.setProperty(
+                        "--delay",
+                        `${index * 90}ms`
+                    );
+
+                    const imageBox =
+                        document.createElement("div");
+                    imageBox.className = "photo-image";
+
+                    const img =
+                        document.createElement("img");
+                    img.src = photo.image;
+                    img.alt = photo.title;
+                    img.loading = "lazy";
+
+                    const caption =
+                        document.createElement("figcaption");
+                    caption.textContent = photo.title;
+
+                    imageBox.appendChild(img);
+                    card.appendChild(imageBox);
+                    card.appendChild(caption);
+
+                    gallery.appendChild(card);
+                });
+            })
+            .catch(error => {
+                gallery.textContent =
+                    "写真を読み込めませんでした。Live Serverで開いてください。";
+                console.error(error);
+            });
+    </script>
+</body>
+</html>
