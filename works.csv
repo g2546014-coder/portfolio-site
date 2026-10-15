@@ -1,5 +1,34 @@
-
-title,description,image,link,category,year
-Travel,街中の写真,./media/A9B8D6ED-F4EF-4DC8-96EC-4571CC794BEE.JPG,travel.html,旅行,
-Music,ライブ中の写真,./media/EFCD936C-0914-4EEE-ACCA-CD9B330C1D82.JPG,music.html,音楽,
+title,description,image,link,category,year,section
+Travel,街中の写真,./A9B8D6ED-F4EF-4DC8-96EC-4571CC794BEE.JPG,travel.html,旅行,
+Music,ライブ中の写真,./EFCD936C-0914-4EEE-ACCA-CD9B330C1D82.JPG,music.html,音楽,
 Photography,サンタモニカの写真,./media/DSCN6131.JPG,photography.html,写真,
+
+山と空,風景,./IMG_1119.JPG,photography.html,写真,,gallery
+白い花,植物,./IMG_4955.jpeg,photography.html,写真,,gallery
+青い花畑,風景,./IMG_9069.JPG,photography.html,写真,,gallery
+自転車,日常,./IMG_1751.jpeg,photography.html,写真,,gallery
+里見,風景,./DSCN5926.JPG,photography.html,写真,,gallery
+焚き火,日常,./IMG_7901.jpeg,photography.html,写真,,gallery
+野の花,植物,./IMG_0715.jpeg,photography.html,写真,,gallery
+店内の風景,日常,./IMG_9282.jpeg,photography.html,写真,,gallery
+夕暮れ,風景,./IMG_9060.jpeg,photography.html,写真,,gallery
+
+Venice Skatepark,,./DSCN6118.JPG,travel.html,旅行,,travel-losangeles
+Venice Beach,,./DSCN6121.JPG,travel.html,旅行,,travel-losangeles
+Hollywood Boulevard,,./DSCN6148.JPG,travel.html,旅行,,travel-losangeles
+Hollywood,,./DSCN6151.JPG,travel.html,旅行,,travel-losangeles
+Record Store,,./DSCN6158.JPG,travel.html,旅行,,travel-losangeles
+Sunset,,./IMG_1569.JPG,travel.html,旅行,,travel-losangeles
+Australian Flag,,./IMG_7113.jpeg,travel.html,旅行,,travel-perth
+Perth at Night,,./IMG_7121.jpeg,travel.html,旅行,,travel-perth
+Architecture,,./IMG_8139.jpeg,travel.html,旅行,,travel-perth
+Quokka,,./IMG_8527.JPG,travel.html,旅行,,travel-perth
+Lighthouse,,./IMG_8694.JPG,travel.html,旅行,,travel-perth
+Winery,,./IMG_8812.JPG,travel.html,旅行,,travel-perth
+Sydney Town Hall,,./sydney-townhall.jpg,travel.html,旅行,,travel-sydney
+Sydney Harbour,,./sydney-harbour.jpg,travel.html,旅行,,travel-sydney
+Sydney Cafe,,./sydney-cafe.jpg,travel.html,旅行,,travel-sydney
+Historic Building,,./sydney-heritage.jpg,travel.html,旅行,,travel-sydney
+Central Station,,./sydney-station.jpg,travel.html,旅行,,travel-sydney
+University of Sydney,,./sydney-university.jpg,travel.html,旅行,,travel-sydney
+ONE OK ROCK,,./IMG_7490.JPG,music.html,音楽,,music-hero
