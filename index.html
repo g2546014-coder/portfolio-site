@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lint Oura</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#top">Lint Oura</a>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#hobby">Hobby</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="top">
+                <img src="./media/DSCN6169.JPG" width="200" alt="ライブの写真">
+                <h1>
+                    Lint Oura<br>
+                    Portfolio
+                </h1>
+            </section>
+
+            <section id="about">
+                <h3>About</h3>
+                <p>
+                    <span class="japanese-name">大浦 怜音</span><br>
+                    2006/12/25<br>
+                    東京都市大学デザイン・データ科学部
+                </p>
+            </section>
+
+            <section id="hobby">
+                <h3>Hobby</h3>
+
+                <div class="works-controls">
+                    <select id="category">
+                        <option value="all">All category</option>
+                    </select>
+
+                    <select id="sort">
+                        <option value="new">New</option>
+                        <option value="old">Old</option>
+                        <option value="title">Title</option>
+                    </select>
+                </div>
+
+                <div class="works-marquee">
+                    <div id="works-grid"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <span>©2026 Lint Oura</span>
+        </footer>
+
+        <script src="works.js"></script>
+    </body>
+</html>
